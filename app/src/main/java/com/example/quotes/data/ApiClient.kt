@@ -7,10 +7,11 @@ object ApiClient {
     
     private  const val  BASE_URL = "https://zenquotes.io/api/"
     val api: QuotesApi by lazy {
-        Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+        Retrofit
+            .Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
             .create(QuotesApi::class.java)
     }
 

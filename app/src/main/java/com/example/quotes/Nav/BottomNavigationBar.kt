@@ -2,8 +2,8 @@ package com.example.quotes.Nav
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -11,7 +11,6 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 
 data class NavigationItem(
@@ -27,7 +26,7 @@ fun BottomNavigationBar(navController: NavHostController) {
     val items = listOf(
         NavigationItem("home", Icons.Default.Home, "Home"),
         NavigationItem("list", Icons.Default.List, "List"),
-        NavigationItem("favorites", Icons.Default.Star, "Favorites")
+        NavigationItem("help", Icons.Default.Info, "About ")
     )
 
     NavigationBar(
